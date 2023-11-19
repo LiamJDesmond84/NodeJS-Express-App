@@ -15,19 +15,23 @@ const app = express();
 app.use('/', (req, res, next) => {
     console.log('This always runs');
     next();
-})
+});
 
 
 app.use('/add-product', (req, res, next) => {
     console.log('/add-product called');
     res.send('<html><body><h1>Add Product</h1><form action="/product" method="POST"><input type="text" name="title"/><button type="submit">Submit</button></form></body></html>')
-})
+});
+
+app.use('/product', (req, res, next) => {
+
+});
 
 //* Had to block favicon.ico request to stop this from being called.
 app.use('/', (req, res, next) => {
     console.log('SECOND middlewar after next()');
     res.send('<h1>YO</h1>')
-})
+});
 
 
 // const server = http.createServer(app);
