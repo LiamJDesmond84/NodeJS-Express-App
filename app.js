@@ -11,6 +11,7 @@ const app = express();
 //     next();
 // })
 
+
 //* Will run for every request because '/'
 app.use('/', (req, res, next) => {
     console.log('This always runs');
@@ -24,7 +25,8 @@ app.use('/add-product', (req, res, next) => {
 });
 
 app.use('/product', (req, res, next) => {
-
+    console.log(req.body);
+    res.redirect('/');
 });
 
 //* Had to block favicon.ico request to stop this from being called.
