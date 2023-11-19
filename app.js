@@ -11,7 +11,7 @@ const app = express();
 //     next();
 // })
 
-
+//* Will run for every request because '/'
 app.use('/', (req, res, next) => {
     console.log('This always runs');
     next();
@@ -20,7 +20,7 @@ app.use('/', (req, res, next) => {
 
 app.use('/add-product', (req, res, next) => {
     console.log('/add-product called');
-    res.send('<h1>Add Product</h1>')
+    res.send('<html><body><h1>Add Product</h1><form><input type="text" /></form></body></html>')
 })
 
 //* Had to block favicon.ico request to stop this from being called.
