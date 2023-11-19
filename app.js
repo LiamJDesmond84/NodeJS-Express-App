@@ -34,4 +34,6 @@ app.use('/', (req, res, next) => {
 
 // server.listen(3000);
 
-app.listen(3000);
+app.listen(3000, () => {
+    console.log('Server running on port 3000');
+});
