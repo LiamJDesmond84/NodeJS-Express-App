@@ -7,11 +7,12 @@ const app = express();
 //# function passing through app.use() will be executed for every incoming request
 app.use((req, res, next) => {
     console.log('middleware');
-    next();
+    next(); // Allows the request to continue to the next middleware in line
 })
 
 app.use((req, res, next) => {
-    console.log('middlewar 2');
+    console.log('SECOND middlewar after next()');
+    // ...
 })
 
 
