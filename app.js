@@ -1,5 +1,6 @@
 // const http = require('http');
 const express = require('express');
+// const bodyParser = requre('body-parser');
 
 const app = express();
 
@@ -11,6 +12,8 @@ const app = express();
 //     next();
 // })
 
+
+app.use(express.urlencoded({ extended: true }));
 
 //* Will run for every request because '/'
 app.use('/', (req, res, next) => {
