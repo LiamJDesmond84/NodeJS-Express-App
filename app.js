@@ -20,7 +20,7 @@ app.use('/', (req, res, next) => {
 
 app.use('/add-product', (req, res, next) => {
     console.log('/add-product called');
-    res.send('<html><body><h1>Add Product</h1><form><input type="text" /></form></body></html>')
+    res.send('<html><body><h1>Add Product</h1><form><input type="text" name="title"/><button type="submit">Submit</button></form></body></html>')
 })
 
 //* Had to block favicon.ico request to stop this from being called.
