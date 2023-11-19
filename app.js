@@ -12,13 +12,18 @@ const app = express();
 // })
 
 
-
-app.use('/add-product', (req, res, next) => {
-    console.log('SECOND middlewar after next()');
-    res.send('<h1>YO</h1>')
+app.use('/', (req, res, next) => {
+    console.log('This always runs');
+    next();
 })
 
 
+app.use('/add-product', (req, res, next) => {
+    console.log('/add-product called');
+    res.send('<h1>Add Product</h1>')
+})
+
+//* Had to block favicon.ico request to stop this from being called.
 app.use('/', (req, res, next) => {
     console.log('SECOND middlewar after next()');
     res.send('<h1>YO</h1>')
