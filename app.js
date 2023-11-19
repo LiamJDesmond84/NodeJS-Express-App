@@ -12,7 +12,7 @@ app.use((req, res, next) => {
 
 app.use((req, res, next) => {
     console.log('SECOND middlewar after next()');
-    // ...
+    res.send('<h1>YO</h1>')
 })
 
 
