@@ -4,8 +4,8 @@ const router = express.Router();
 
 
 //# Had to block favicon.ico request to stop this from being called.
-router.use('/', (req, res, next) => {
-    console.log('SECOND middlewar after next()');
+router.get('/', (req, res, next) => {
+    console.log('SHOP JS');
     res.send('<h1>Hello from Express!</h1>')
 });
 
