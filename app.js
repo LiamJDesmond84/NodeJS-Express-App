@@ -10,8 +10,9 @@ const shopRoutes = require('./routes/shop')
 //# urlencoded since body-parser already included
 app.use(express.urlencoded({ extended: true }));
 
-app.use(adminRoutes);
+
 app.use(shopRoutes);
+app.use(adminRoutes);
 
 
 app.listen(3000, () => {

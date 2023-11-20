@@ -16,5 +16,3 @@ router.post('/product', (req, res, next) => {
 
 
 module.exports = router;
-
-
