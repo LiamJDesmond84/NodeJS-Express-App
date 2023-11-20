@@ -15,6 +15,6 @@ router.post('/product', (req, res, next) => {
 });
 
 
-module.exports.router = router;
+module.exports = router;
 
 

@@ -7,6 +7,9 @@ const app = express();
 const adminRoutes = require('./routes/admin')
 const shopRoutes = require('./routes/shop')
 
+app.use(adminRoutes);
+app.use(shopRoutes);
+
 
 //* function passing through app.use() will be executed for every incoming request
 // app.use((req, res, next) => {
