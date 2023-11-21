@@ -7,6 +7,8 @@ const rootDir = require('./util/path');
 
 const app = express();
 
+// For CSS imports
+// app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static('public'));
 
 const adminRoutes = require('./routes/admin')
