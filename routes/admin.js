@@ -21,7 +21,7 @@ router.post('/add-product', (req, res, next) => {
 
     console.log(req.body);
 
-    // products.push(req.body); 
+    products.push({title: req.body.title}); 
     
     // for(x in products) {
     //     console.log(products[x]);
