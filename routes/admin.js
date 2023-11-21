@@ -4,12 +4,15 @@ const router = express.Router();
 
 const path = require('path');
 
+const rootDir = require('../util/path');
+
 
 // - /admin/add-product => GET
 router.get('/add-product', (req, res, next) => {
     console.log('/add-product called');
     
-    res.sendFile(path.join(__dirname, '../', 'views', 'add-product.html'));
+    // res.sendFile(path.join(__dirname, '../', 'views', 'add-product.html'));
+    res.sendFile(path.join(rootDir, 'views', 'add-product.html'));
 });
 
 // - /admin/add-product => POST
