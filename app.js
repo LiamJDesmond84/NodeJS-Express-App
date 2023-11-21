@@ -8,7 +8,7 @@ const rootDir = require('./util/path');
 const app = express();
 
 
-const adminRoutes = require('./routes/admin')
+const adminData = require('./routes/admin')
 const shopRoutes = require('./routes/shop')
 
 //* function passing through app.use() will be executed for every incoming request
@@ -20,7 +20,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 
-app.use('/admin', adminRoutes);
+app.use('/admin', adminData.routes);
 app.use(shopRoutes);
 
 //* 404 handler - Catch-all route
