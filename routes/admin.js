@@ -19,16 +19,17 @@ router.get('/add-product', (req, res, next) => {
 // - /admin/add-product => POST
 router.post('/add-product', (req, res, next) => {
 
-    // console.log(req.body);
+    console.log(req.body);
 
-    products.push(req.body); 
+    // products.push(req.body); 
     
-    for(x in products) {
-        console.log(products[x]);
-    }
+    // for(x in products) {
+    //     console.log(products[x]);
+    // }
 
     res.redirect('/');
 });
 
 
-module.exports = router;
+exports.routes = router;
+exports.products = products;
