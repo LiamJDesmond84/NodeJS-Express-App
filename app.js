@@ -27,5 +27,3 @@ app.listen(3000, () => {
     console.log('Server running on port 3000');
 });
 
-// module.exports = path.dirname(process.mainModule.filename);
-// module.exports = path.dirname(require.main.filename);
